@@ -1,6 +1,6 @@
 package com.caio;
 
-public class Conteudo {
+public abstract class Conteudo {
 
 	private String titulo;
 	private String descricao;
@@ -23,7 +23,6 @@ public class Conteudo {
 		this.descricao = descricao;
 	}
 	
-	
-	
+	public abstract double calculaXp();
 	
 }
