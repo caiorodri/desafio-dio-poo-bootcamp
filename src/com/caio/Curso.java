@@ -3,11 +3,13 @@ package com.caio;
 public class Curso extends Conteudo{
 
 	private int cargaHoraria;
-	
+
 	Curso(){}
 	
-	Curso(int cargaHoraria){
-		
+	Curso(String titulo, String descricao, int cargaHoraria){
+
+		this.setTitulo(titulo);
+		this.setDescricao(descricao);
 		this.cargaHoraria = cargaHoraria;
 		
 	}
@@ -27,5 +29,11 @@ public class Curso extends Conteudo{
 		return XP_PADRAO * cargaHoraria * 2;
 	}
 	
+
 	
+	@Override
+	public String toString() {
+		return "Titulo: " + this.getTitulo() + ", Carga Horaria: " + cargaHoraria + " Horas";
+	}
+
 }

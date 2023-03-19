@@ -6,7 +6,6 @@ public abstract class Conteudo {
 	private String descricao;
 	protected final double XP_PADRAO = 10d;
 	
-	
 	public String getTitulo() {
 		return titulo;
 	}

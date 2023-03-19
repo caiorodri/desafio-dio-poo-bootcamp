@@ -1,22 +1,25 @@
 package com.caio;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Mentoria extends Conteudo{
 
-	private Date data;
+	private LocalDate data;
 
 	public Mentoria() {}
 	
-	public Mentoria(Date data) {
-		this.data = data;
+	public Mentoria(String titulo, String descricao) {
+		
+		this.setTitulo(titulo);
+		this.setDescricao(descricao);
+		this.data = LocalDate.now();
 	}
 	
-	public Date getData() {
+	public LocalDate getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
+	public void setData(LocalDate data) {
 		this.data = data;
 	}
 	
@@ -24,5 +27,12 @@ public class Mentoria extends Conteudo{
 	public double calculaXp(){
 		return XP_PADRAO * 6;
 	}
+
+	@Override
+	public String toString() {
+		return "Titulo: " + getTitulo() + ", Data: " + this.data;
+	}
+	
+	
 	
 }
